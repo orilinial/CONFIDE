@@ -114,7 +114,7 @@ def make_dataset(config):
     else:
         path = config.data.path
 
-    os.makedirs(path)
+    os.makedirs(path, exist_ok=True)
     utils.utils.save_config(config, os.path.join(path, 'config.yaml'))
 
     if config.system.h5py:
@@ -126,7 +126,7 @@ def make_dataset(config):
         torch.save(t_dataset, os.path.join(path, 't_dataset.pkl'))
         torch.save(parameters_dataset, os.path.join(path, 'parameters_dataset.pkl'))
 
-    print(f'Dataset created and saved to {path}/')
+    print(f'Dataset created and saved to {path}')
 
 
 if __name__ == '__main__':
