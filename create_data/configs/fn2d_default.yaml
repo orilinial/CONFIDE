@@ -1,0 +1,10 @@
+data:
+  path: 'data/fn2d/'
+  size: 1000
+  x_len: 0.16
+  t_len: 1.0
+  delta_t: 0.01
+  delta_x: 0.01
+
+pde:
+  type: 'fn2d'

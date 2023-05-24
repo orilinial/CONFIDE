@@ -1,0 +1,12 @@
+pde_type: 'fn2d'
+
+train:
+  batch_size: 256
+
+results_path: 'src/results/fn2d/rhs/'
+create_timestamp: False
+
+data:
+  path: 'data/fn2d/'
+  t_len_pct: 0.5
+

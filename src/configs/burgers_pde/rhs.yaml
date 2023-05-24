@@ -1,0 +1,12 @@
+pde_type: 'burgers'
+
+train:
+  batch_size: 256
+
+results_path: 'src/results/burgers/rhs/'
+create_timestamp: False
+
+data:
+  path: 'data/burgers/'
+  t_len_pct: 0.5
+

@@ -1,0 +1,6 @@
+data:
+  path: 'data/const/'
+  size: 10000
+
+pde:
+  type: 'const'

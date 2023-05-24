@@ -1,0 +1,11 @@
+pde_type: 'const'
+
+train:
+  batch_size: 256
+
+results_path: 'src/results/const/rhs'
+create_timestamp: False
+
+data:
+  path: 'data/const/'
+  t_len_pct: 0.5

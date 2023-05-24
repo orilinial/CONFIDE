@@ -1,0 +1,6 @@
+data:
+  path: 'data/burger/'
+  size: 10000
+
+pde:
+  type: 'burgers'
