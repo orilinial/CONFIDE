@@ -1,0 +1,13 @@
+pde_type: 'fn2d'
+
+train:
+  batch_size: 256
+  num_epochs: 100
+
+results_path: 'src/results/fn2d/neural_ode/rho_0.5/'
+create_timestamp: False
+
+data:
+  path: 'data/fn2d/date_15_05_2023_time_12_11_hash_351959/'   # random params 1K data a=1e-3, b=5e-3 random, Ru, Rv unknown and changing
+  t_len_pct: 0.5
+

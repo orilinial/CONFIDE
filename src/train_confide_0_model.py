@@ -8,8 +8,8 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import trange
 
 from configs.train_defaults import get_cfg_defaults
-from rhs_models.one_d_model import RHSModel as RHSModel1D
-from rhs_models.two_d_model import RHSModel as RHSModel2D
+from confide_0_models.one_d_model import ConfideZero as ConfideZeroModel1D
+from confide_0_models.two_d_model import ConfideZero as ConfideZeroModel2D
 from dataset import PDEDataset
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -50,9 +50,9 @@ def calc_ae_recon_loss(context, pred_context, loss_type='l2'):
 
 def get_model(model_type):
     if model_type == 'fn2d':
-        return RHSModel2D
+        return ConfideZeroModel2D
     else:
-        return RHSModel1D
+        return ConfideZeroModel1D
 
 
 def train(config):

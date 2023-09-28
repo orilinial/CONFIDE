@@ -97,9 +97,9 @@ class ConvAE(nn.Module):
         return out, latent
 
 
-class PDExplain(nn.Module):
+class Confide(nn.Module):
     def __init__(self, input_dim, pde_type, use_ic_in_decoder=True):
-        super(PDExplain, self).__init__()
+        super(Confide, self).__init__()
         self.ae_model = get_ae_model(pde_type)(input_dim, use_ic_in_decoder)
         self.context_to_params_model = get_context_to_params_model(pde_type)(self.ae_model.latent_dim, input_dim)
         self.loss_func = get_pde_loss(pde_type)

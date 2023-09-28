@@ -3,7 +3,7 @@ pde_type: 'burgers'
 train:
   batch_size: 256
 
-results_path: 'src/results/burgers/rhs/'
+results_path: 'src/results/burgers/confide_0/'
 create_timestamp: False
 
 data:

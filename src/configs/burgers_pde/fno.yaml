@@ -1,0 +1,6 @@
+results_path: 'src/results/burgers/fno/const_random_params_t_0.2/'
+create_timestamp: False
+
+data:
+  path: 'data/burger/gp_initial_random_param/date_23_01_2023_time_18_21_hash_689540/'
+  t_len_pct: 0.2

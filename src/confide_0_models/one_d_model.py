@@ -79,9 +79,9 @@ class ContextToRHS(nn.Module):
         return rhs
 
 
-class RHSModel(nn.Module):
+class ConfideZero(nn.Module):
     def __init__(self, input_dim, x_dim):
-        super(RHSModel, self).__init__()
+        super(ConfideZero, self).__init__()
         self.ae_model = FCAE(input_dim)
         self.context_to_params_model = ContextToRHS(x_dim, self.ae_model.latent_dim)
         self.loss_func = calc_pde_loss

@@ -9,7 +9,7 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import trange
 
 from configs.train_defaults import get_cfg_defaults
-from pde_models.pdexplain_model import PDExplain
+from pde_models.confide_model import Confide
 from dataset import PDEDataset
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -120,7 +120,7 @@ def train(config):
     # --------------- Create model and optimizer ---------------------
     # ----------------------------------------------------------------
     input_dim = train_dataset.context_shape
-    model = PDExplain(input_dim, config.pde_type, config.model.use_ic_in_decoder).to(device)
+    model = Confide(input_dim, config.pde_type, config.model.use_ic_in_decoder).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=config.train.lr)
 
     # Evaluate pretrained model to have a baseline
@@ -129,7 +129,7 @@ def train(config):
     test_pde_loss, ae_recon_loss, params_error))
 
     # Create a model for saving the best model found (on val set)
-    best_model = PDExplain(input_dim, config.pde_type, config.model.use_ic_in_decoder).to(device)
+    best_model = Confide(input_dim, config.pde_type, config.model.use_ic_in_decoder).to(device)
     best_loss = np.inf
 
     # ----------------------------------------------------------------

@@ -3,7 +3,7 @@ pde_type: 'fn2d'
 train:
   batch_size: 256
 
-results_path: 'src/results/fn2d/rhs/'
+results_path: 'src/results/fn2d/confide_0/'
 create_timestamp: False
 
 data:

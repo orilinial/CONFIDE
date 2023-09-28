@@ -51,3 +51,15 @@ def show_3d_fig(x, t, y, title=None):
     if title is not None:
         plt.title(title)
     plt.show()
+
+
+def print_model_size(model, name=''):
+    total_params = sum(p.numel() for p in model.parameters())
+    if total_params // 1_000_000_000 > 1:
+        print(f"Model {name} created with {total_params / 1_000_000_000:.2f}B parameters.")
+    elif total_params // 1_000_000 > 1:
+        print(f"Model {name} created with {total_params / 1_000_000:.2f}M parameters.")
+    elif total_params // 1_000 > 1:
+        print(f"Model {name} created with {total_params / 1_000:.2f}K parameters.")
+    else:
+        print(f"Model {name} created with {total_params} parameters.")

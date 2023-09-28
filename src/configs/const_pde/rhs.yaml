@@ -3,7 +3,7 @@ pde_type: 'const'
 train:
   batch_size: 256
 
-results_path: 'src/results/const/rhs'
+results_path: 'src/results/const/confide_0/'
 create_timestamp: False
 
 data:
