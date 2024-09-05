@@ -1,4 +1,4 @@
-results_path: 'src/results/const/unet/'
+results_path: 'src/results/neural_ode/const/'
 create_timestamp: False
 pde_type: 'const'
 

@@ -123,10 +123,8 @@ def get_ae_model(pde_type):
         return FCAE
     elif pde_type == 'fn2d':
         return ConvAE
-    elif pde_type == 'fn2d_u':
-        return ConvAE
     else:
-        raise ValueError('pde_type should be [const/burgers/fn2d/fn2d_u]')
+        raise ValueError('pde_type should be [const/burgers/fn2d]')
 
 
 def get_context_to_params_model(pde_type):
@@ -134,12 +132,10 @@ def get_context_to_params_model(pde_type):
         from .const_pde_model import ContextToParams
     elif pde_type == 'burgers':
         from .burgers_model import ContextToParams
-    elif pde_type == 'fn2d_u':
-        from .fn2d_u_model import ContextToParams
     elif pde_type == 'fn2d':
         from .fn2d_model import ContextToParams
     else:
-        raise ValueError('pde_type should be [const/burger/fn2d/fn2d_u]')
+        raise ValueError('pde_type should be [const/burger/fn2d]')
 
     return ContextToParams
 
@@ -150,11 +146,9 @@ def get_pde_loss(pde_type):
         from .const_pde_model import calc_const_pde_loss as calc_pde_loss
     elif pde_type == 'burgers':
         from .burgers_model import calc_burgers_pde_loss as calc_pde_loss
-    elif pde_type == 'fn2d_u':
-        from .fn2d_u_model import calc_fn2d_pde_loss as calc_pde_loss
     elif pde_type == 'fn2d':
         from .fn2d_model import calc_fn2d_pde_loss as calc_pde_loss
     else:
-        raise ValueError('pde_type should be [const/burger/fn2d/fn2d_u]')
+        raise ValueError('pde_type should be [const/burger/fn2d]')
 
     return calc_pde_loss

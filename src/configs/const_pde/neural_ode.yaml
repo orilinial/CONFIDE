@@ -1,8 +1,0 @@
-results_path: 'src/results/neural_ode/const/rho_21/'
-create_timestamp: False
-pde_type: 'const'
-
-data:
-  path: 'data/heat/gp_initial_random_param/data_size_10000/date_16_01_2023_time_11_36_hash_888427/'
-  t_len_pct: 0.21
-

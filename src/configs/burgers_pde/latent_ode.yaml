@@ -1,4 +1,4 @@
-results_path: 'src/results/burgers/fno/'
+results_path: 'src/results/burgers/latent_ode/'
 create_timestamp: False
 
 data:

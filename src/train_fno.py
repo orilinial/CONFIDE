@@ -6,12 +6,9 @@ import torch
 from torch.utils.data.dataloader import DataLoader
 from tqdm import trange
 from neuralop.models import TFNO
-from neuralop import LpLoss, H1Loss
-from neuralop import Trainer
-
 
 from src.configs.train_defaults import get_cfg_defaults
-from src.lantent_ode_dataset import PDEDataset
+from src.data_driven_dataset import PDEDataset
 
 from utils.utils import get_date_time_str, save_config, set_seed
 
