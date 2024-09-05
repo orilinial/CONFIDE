@@ -2,6 +2,9 @@
 
 This repository is an implementation of the [CONFIDE paper](https://arxiv.org/abs/2303.15827), which is part of the proceedings of KDD 2024.
 
+Example results for signal prediction using (from left to right): (1) Ground truth, (2) CONFIDE, (3) FNO, and (4) UNET (other baselines are worse).
+![](https://github.com/orilinial/CONFIDE/pde_vid_2_all.gif)
+
 ### Data creation
 To create the datasets used in the paper run:
 * Constant coefficient PDE:  `python create_data/create_data.py --config-file create_data/configs/const_pde_default.yaml`
