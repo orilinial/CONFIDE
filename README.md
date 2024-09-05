@@ -3,7 +3,10 @@
 This repository is an implementation of the [CONFIDE paper](https://arxiv.org/abs/2303.15827), which is part of the proceedings of KDD 2024.
 
 Example results for signal prediction using (from left to right): (1) Ground truth, (2) CONFIDE, (3) FNO, and (4) UNET (other baselines are worse).
-![](https://github.com/orilinial/CONFIDE/pde_vid_2_all.gif)
+
+<p align="center">
+<img src="https://github.com/orilinial/CONFIDE/blob/master/pde_vid_2_all.gif" width="800">
+</p>
 
 ### Data creation
 To create the datasets used in the paper run:
